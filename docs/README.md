@@ -9,7 +9,7 @@
 | **GitHub Repository** | [https://github.com/a-nunley/full-stack-tech-exam](https://github.com/a-nunley/full-stack-tech-exam) | 
 | **GitHub Pages (docs/)** | [https://a-nunley.github.io/full-stack-tech-exam/](https://a-nunley.github.io/full-stack-tech-exam/) | 
 | **Dev Server (Render)** | [https://full-stack-tech-exam-zpmc.onrender.com](https://full-stack-tech-exam-zpmc.onrender.com) | 
-| **Production Server (GCP)** | [http://your.static.external.ip:3000](http://your.static.external.ip:3000) | 
+| **Production Server (GCP)** | [http://34.44.72.106/]http://34.44.72.106/) | 
 | **Issue** | [https://github.com/your-username/your-repo-name/issues/1](https://github.com/your-username/your-repo-name/issues/1) | 
 | **Pull Request** | [https://github.com/your-username/your-repo-name/pull/1](https://github.com/your-username/your-repo-name/pull/1) | 
 | **Milestone** | [https://github.com/your-username/your-repo-name/milestone/1](https://github.com/your-username/your-repo-name/milestone/1) | 

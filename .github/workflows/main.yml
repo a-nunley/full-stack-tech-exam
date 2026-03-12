@@ -1,0 +1,43 @@
+name: CI/CD Main Branch
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      APP_NAME: ${{ vars.APP_NAME }}
+      NODE_ENV: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show configured variable
+        run: echo "Running workflow for $APP_NAME"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Basic app check
+        run: |
+          test -f app.mjs
+          test -f public/exam.html
+          test -f public/script.js
+
+      - name: Start app briefly
+        run: |
+          node app.mjs &
+          sleep 10
+          kill $! || true
