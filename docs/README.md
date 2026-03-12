@@ -9,11 +9,11 @@
 | **GitHub Repository** | [https://github.com/a-nunley/full-stack-tech-exam](https://github.com/a-nunley/full-stack-tech-exam) | 
 | **GitHub Pages (docs/)** | [https://a-nunley.github.io/full-stack-tech-exam/](https://a-nunley.github.io/full-stack-tech-exam/) | 
 | **Dev Server (Render)** | [https://full-stack-tech-exam-zpmc.onrender.com](https://full-stack-tech-exam-zpmc.onrender.com) | 
-| **Production Server (GCP)** | [http://your.static.external.ip:3000](http://your.static.external.ip:3000) | 
-| **Issue** | [[https://github.com/your-username/your-repo-name/issues/1](https://github.com/your-username/your-repo-name/issues/1)](https://github.com/a-nunley/full-stack-tech-exam/issues/3) | 
-| **Pull Request** | [[https://github.com/your-username/your-repo-name/pull/1](https://github.com/your-username/your-repo-name/pull/1)](https://github.com/a-nunley/full-stack-tech-exam/pull/2) | 
-| **Milestone** | [[https://github.com/your-username/your-repo-name/milestone/1](https://github.com/your-username/your-repo-name/milestone/1)](https://github.com/a-nunley/full-stack-tech-exam/milestone/1) | 
-| **Successful CI/CD Action** | [[https://github.com/your-username/your-repo-name/actions/runs/your-run-id](https://github.com/your-username/your-repo-name/actions/runs/your-run-id)](https://github.com/a-nunley/full-stack-tech-exam/actions/runs/23018148123) | 
+| **Production Server (GCP)** | [http://34.44.72.106/]http://34.44.72.106/) | 
+| **Issue** | [https://github.com/a-nunley/full-stack-tech-exam/issues/3](https://github.com/a-nunley/full-stack-tech-exam/issues/3) | 
+| **Pull Request** | [https://github.com/a-nunley/full-stack-tech-exam/pull/2](https://github.com/a-nunley/full-stack-tech-exam/pull/2) | 
+| **Milestone** | [https://github.com/a-nunley/full-stack-tech-exam/milestone/1](https://github.com/a-nunley/full-stack-tech-exam/milestone/1) | 
+| **Successful CI/CD Action** | [https://github.com/a-nunley/full-stack-tech-exam/actions/runs/23018148123](https://github.com/a-nunley/full-stack-tech-exam/actions/runs/23018148123) | 
 | **ssh cmd to your gcp** | `ssh -i student-key bcumbie@34.44.72.106` | 
 
 ---
