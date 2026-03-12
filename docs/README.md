@@ -31,8 +31,9 @@
 
 ### 2️⃣ configure your repository
 - set up a GitHub Pages deployment pointing to `docs/`
-- ? point readme to docs/ in ``
-- 
+- include the link in the `About`
+- ensure the GitHub Pages shows your `README` 
+   
 ### 3️⃣ modify the codebase
 - take the steps to get the `Node.js` app working (suggest locally)
 - an endpoint to serve front end html via a `public/` directory
