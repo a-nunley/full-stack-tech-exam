@@ -14,7 +14,7 @@
 | **Pull Request** | [[https://github.com/your-username/your-repo-name/pull/1](https://github.com/your-username/your-repo-name/pull/1)](https://github.com/a-nunley/full-stack-tech-exam/pull/2) | 
 | **Milestone** | [[https://github.com/your-username/your-repo-name/milestone/1](https://github.com/your-username/your-repo-name/milestone/1)](https://github.com/a-nunley/full-stack-tech-exam/milestone/1) | 
 | **Successful CI/CD Action** | [[https://github.com/your-username/your-repo-name/actions/runs/your-run-id](https://github.com/your-username/your-repo-name/actions/runs/your-run-id)](https://github.com/a-nunley/full-stack-tech-exam/actions/runs/23018148123) | 
-| **ssh cmd to your gcp** | `ssh -i student-key bcumbie@your.static.external.ip` | 
+| **ssh cmd to your gcp** | `ssh -i student-key bcumbie@34.44.72.106` | 
 
 ---
 
