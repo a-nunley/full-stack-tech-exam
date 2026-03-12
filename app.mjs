@@ -1,8 +1,8 @@
-
+import 'dotenv/config'
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { MongoClient, ServerApiVersion, ObjectId } from 'mongodb';
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {
   }
 });
 
-const yourNameAndEmoji = { name: 'barry', emoji: '🐸' }; //don't use my frog. 
+const yourNameAndEmoji = { name: 'alex', emoji: '🐶' };
 
 
 //app instantiations
@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'public', 'exam.html'));
-})
+});
 
 app.post('/api/get-name', async (req, res) => {
   try {
@@ -62,19 +62,16 @@ app.post('/api/get-name', async (req, res) => {
     console.error('Error retrieving name:', error);
     res.status(500).json({ error: 'Failed to retrieve name' });
   }
-
-})
+});
 
 /* 
 👇🏻no modifications needed for this endpoint, but you do have to figure out where, when, & how to call it at least once!
 */
 app.get('/api/init-emoji', async (req, res) => {
   try {
-    
     const db = client.db('cis486');
     const collection = db.collection('exam');
     
-    // Check if name already exists
     const existingEntry = await collection.findOne({ name: yourNameAndEmoji.name });
     
     if (existingEntry) {
@@ -84,7 +81,6 @@ app.get('/api/init-emoji', async (req, res) => {
       });
     }
     
-    // Only insert if name doesn't exist
     const result = await collection.insertOne(yourNameAndEmoji);
     res.json({ message: 'name & emoji recorded', id: result.insertedId });
   }
@@ -92,13 +88,19 @@ app.get('/api/init-emoji', async (req, res) => {
     console.error('Error creating attendance:', error);
     res.status(500).json({ error: 'Failed to retrieve emoji' });
   }
-})
+});
 
-/*
-👇🏻notice the refactored app.listen:
-no code mods needed but this uses the PORT variable for PaaS deployments
-*/ 
-//start the server. 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
-})
+async function startServer() {
+  try {
+    await client.connect();
+    console.log('Connected to MongoDB');
+
+    app.listen(PORT, () => {
+      console.log(`Example app listening on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+  }
+}
+
+startServer();
